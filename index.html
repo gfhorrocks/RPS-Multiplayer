@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css">
+
+    <script src="https://www.gstatic.com/firebasejs/5.9.1/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyBRZrxpCZ2PYibch602622Rkv7hb1kCCtk",
+            authDomain: "rps-multiplayer-fc38c.firebaseapp.com",
+            databaseURL: "https://rps-multiplayer-fc38c.firebaseio.com",
+            projectId: "rps-multiplayer-fc38c",
+            storageBucket: "rps-multiplayer-fc38c.appspot.com",
+            messagingSenderId: "522115982167"
+        };
+        firebase.initializeApp(config);
+    </script>
+</head>
+
+<body>
+
+    <div class="jumbotron jumbotron-fluid" style="margin: 3em">
+        <h1 class="display-4" style="text-align: center">Rock/Paper/Scissors Multiplayer</h1></br>
+        <div class="row justify-content-around" style="text-align: center">
+            <div class="col-5">
+                <div class="card">
+                    <img id="p1Image" class="card-img-top" src="assets/images/rpsStock.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Player 1</h5>
+                        <p id="p1Text" class="card-text">Information</p>
+                        <button id="p1Rock" class="btn btn-primary">Rock</button>
+                        <button id="p1Paper" class="btn btn-primary">Paper</button>
+                        <button id="p1Scissors" class="btn btn-primary">Scissors</button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-5">
+                <div class="card">
+                    <img id="p2Image" class="card-img-top" src="assets/images/rpsStock.png" alt="Card image cap">
+                    <div class="card-body">
+                        <h5 class="card-title">Player 2</h5>
+                        <p id="p2Text" class="card-text">Information</p>
+                        <button id="p2Rock" class="btn btn-primary">Rock</button>
+                        <button id="p2Paper" class="btn btn-primary">Paper</button>
+                        <button id="p2Scissors" class="btn btn-primary">Scissors</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script src="assets/javascript/game.js"></script>
+</body>
+
+</html>
