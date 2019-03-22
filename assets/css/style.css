@@ -8,3 +8,16 @@ body{
     background: black;
     border-color: gray;
 }
+.card {
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+}
+
+.jumbotron-fluid{
+    border-color: black;
+    border-width: 2px;
+    border-style: solid;
+    margin: 2em;
+}
+
