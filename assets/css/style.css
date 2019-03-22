@@ -12,6 +12,7 @@ body{
     border-color: black;
     border-width: 2px;
     border-style: solid;
+    align-items: center;
 }
 
 .jumbotron-fluid{
@@ -24,4 +25,8 @@ body{
 
 .title{
     font-size: auto;
+}
+
+img{
+    max-width: 400px;
 }
