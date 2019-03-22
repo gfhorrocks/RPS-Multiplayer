@@ -19,8 +19,9 @@ body{
     border-width: 2px;
     border-style: solid;
     margin: 2em;
+    padding: 1em;
 }
 
-.display-5{
-    padding: 0 2em 0 2em;
+.title{
+    font-size: auto;
 }
