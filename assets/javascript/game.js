@@ -33,6 +33,7 @@ connectionsRef.on("value", function (snap) {
    
     if (snap.numChildren() === 1) {
         console.log("Setting Player 1");
+        console.log(snap.numChildren());
         database.ref().set({
             playerOne: snap.val()
         })
