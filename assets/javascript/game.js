@@ -9,8 +9,6 @@ var connectionsRef = database.ref("/connections");
 // '.info/connected' is a boolean value, true if the client is connected and false if they are not.
 var connectedRef = database.ref(".info/connected");
 
-var playersRef = database.ref();
-
 // When the client's connection state changes...
 connectedRef.on("value", function (snap) {
 
@@ -31,7 +29,7 @@ connectionsRef.on("value", function (snap) {
     // The number of online users is the number of children in the connections list.
     $("#connected-viewers").text("Connected Users: " + snap.numChildren());
     
-    playersRef.push(snap.val());
+    connections = snap.numChildren();
    
     if (snap.numChildren() === 1) {
         console.log("Setting Player 1");
