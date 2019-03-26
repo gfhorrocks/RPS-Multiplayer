@@ -18,6 +18,8 @@ connectedRef.on("value", function (snap) {
         // Add user to the connections list.
         var con = connectionsRef.push(true);
 
+        console.log(database.ref("/connections"));
+
         // Remove user from the connection list when they disconnect.
         con.onDisconnect().remove();
     }
@@ -29,21 +31,10 @@ connectionsRef.on("value", function (snap) {
     // The number of online users is the number of children in the connections list.
     $("#connected-viewers").text("Connected Users: " + snap.numChildren());
     
-    connections = snap.numChildren();
-   
-    if (snap.numChildren() === 1) {
-        console.log("Setting Player 1");
-        console.log(snap.numChildren());
-        database.ref().set({
-            playerOne: snap.val()
-        })
-    } else if (snap.numChildren() === 2) {
-        console.log("Setting Player 2");
-        database.ref().set({
-            playerTwo: snap.val()
-        })
-    }
+    // connections = snap.numChildren();
 
-    console.log("Connected: " +connections);
+    // console.log("Connected: " +connections);
+
+    
 });
 
